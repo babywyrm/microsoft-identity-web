@@ -18,6 +18,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <AdditionalFiles Include="..\stylecop.json" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Compile Include="..\TodoListService\Models\TodoItem.cs" Link="Models\TodoItem.cs" />
   </ItemGroup>
 
