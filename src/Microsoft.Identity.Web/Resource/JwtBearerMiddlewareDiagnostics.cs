@@ -19,7 +19,7 @@ namespace Microsoft.Identity.Web.Resource
         /// Constructor for a <see cref="JwtBearerMiddlewareDiagnostics"/>. This constructor
         /// is used by dependency injection.
         /// </summary>
-        /// <param name="logger">Logger</param>
+        /// <param name="logger">Logger.</param>
         public JwtBearerMiddlewareDiagnostics(ILogger<JwtBearerMiddlewareDiagnostics> logger)
         {
             _logger = logger;

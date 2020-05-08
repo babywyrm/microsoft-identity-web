@@ -15,20 +15,20 @@ namespace Microsoft.Identity.Web.TokenCacheProviders
     public abstract class MsalAbstractTokenCacheProvider : IMsalTokenCacheProvider
     {
         /// <summary>
-        /// Azure AD options
+        /// Azure AD options.
         /// </summary>
         protected readonly IOptions<MicrosoftIdentityOptions> _microsoftIdentityOptions;
 
         /// <summary>
-        /// Http accessor
+        /// Http accessor.
         /// </summary>
         protected readonly IHttpContextAccessor _httpContextAccessor;
 
         /// <summary>
-        /// Constructor of the abstract token cache provider
+        /// Constructor of the abstract token cache provider.
         /// </summary>
-        /// <param name="microsoftIdentityOptions">Configuration options</param>
-        /// <param name="httpContextAccessor">Accessor for the HttpContext</param>
+        /// <param name="microsoftIdentityOptions">Configuration options.</param>
+        /// <param name="httpContextAccessor">Accessor for the HttpContext.</param>
         protected MsalAbstractTokenCacheProvider(IOptions<MicrosoftIdentityOptions> microsoftIdentityOptions, IHttpContextAccessor httpContextAccessor)
         {
             _microsoftIdentityOptions = microsoftIdentityOptions;
@@ -38,7 +38,7 @@ namespace Microsoft.Identity.Web.TokenCacheProviders
         /// <summary>
         /// Initializes the token cache serialization.
         /// </summary>
-        /// <param name="tokenCache">Token cache to serialize/deserialize</param>
+        /// <param name="tokenCache">Token cache to serialize/deserialize.</param>
         /// <returns></returns>
         public Task InitializeAsync(ITokenCache tokenCache)
         {
@@ -54,7 +54,7 @@ namespace Microsoft.Identity.Web.TokenCacheProviders
         }
 
         /// <summary>
-        /// Cache key
+        /// Cache key.
         /// </summary>
         private string GetCacheKey(bool isAppTokenCache)
         {
@@ -105,9 +105,9 @@ namespace Microsoft.Identity.Web.TokenCacheProviders
         }
 
         /// <summary>
-        /// if you want to ensure that no concurrent write takes place, use this notification to place a lock on the entry
+        /// if you want to ensure that no concurrent write takes place, use this notification to place a lock on the entry.
         /// </summary>
-        /// <param name="args">Token cache notification arguments</param>
+        /// <param name="args">Token cache notification arguments.</param>
         /// <returns></returns>
         protected virtual Task OnBeforeWriteAsync(TokenCacheNotificationArgs args)
         {
@@ -115,7 +115,7 @@ namespace Microsoft.Identity.Web.TokenCacheProviders
         }
 
         /// <summary>
-        /// Clear the cache
+        /// Clear the cache.
         /// </summary>
         public async Task ClearAsync()
         {
@@ -127,24 +127,24 @@ namespace Microsoft.Identity.Web.TokenCacheProviders
         }
 
         /// <summary>
-        /// Method to be implemented by concrete cache serializers to write the cache bytes
+        /// Method to be implemented by concrete cache serializers to write the cache bytes.
         /// </summary>
-        /// <param name="cacheKey">Cache key</param>
-        /// <param name="bytes">Bytes to write</param>
+        /// <param name="cacheKey">Cache key.</param>
+        /// <param name="bytes">Bytes to write.</param>
         /// <returns></returns>
         protected abstract Task WriteCacheBytesAsync(string cacheKey, byte[] bytes);
 
         /// <summary>
-        /// Method to be implemented by concrete cache serializers to Read the cache bytes
+        /// Method to be implemented by concrete cache serializers to Read the cache bytes.
         /// </summary>
-        /// <param name="cacheKey">Cache key</param>
-        /// <returns>Read bytes</returns>
+        /// <param name="cacheKey">Cache key.</param>
+        /// <returns>Read bytes.</returns>
         protected abstract Task<byte[]> ReadCacheBytesAsync(string cacheKey);
 
         /// <summary>
-        /// Method to be implemented by concrete cache serializers to remove an entry from the cache
+        /// Method to be implemented by concrete cache serializers to remove an entry from the cache.
         /// </summary>
-        /// <param name="cacheKey">Cache key</param>
+        /// <param name="cacheKey">Cache key.</param>
         protected abstract Task RemoveKeyAsync(string cacheKey);
     }
 }

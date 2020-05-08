@@ -19,9 +19,9 @@ namespace Microsoft.Identity.Web.Resource
 
         /// <summary>
         /// Constructor of the <see cref="OpenIdConnectMiddlewareDiagnostics"/>, used
-        /// by dependency injection
+        /// by dependency injection.
         /// </summary>
-        /// <param name="logger">Logger used to log the diagnostics</param>
+        /// <param name="logger">Logger used to log the diagnostics.</param>
         public OpenIdConnectMiddlewareDiagnostics(ILogger<OpenIdConnectMiddlewareDiagnostics> logger)
         {
             _logger = logger;

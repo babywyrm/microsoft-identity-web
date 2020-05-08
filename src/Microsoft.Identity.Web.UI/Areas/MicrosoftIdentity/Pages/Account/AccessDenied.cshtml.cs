@@ -7,13 +7,13 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 namespace Microsoft.Identity.Web.UI.Areas.MicrosoftIdentity.Pages.Account
 {
     /// <summary>
-    /// Page presenting the Access denied error
+    /// Page presenting the Access denied error.
     /// </summary>
     [AllowAnonymous]
     public class AccessDeniedModel : PageModel
     {
         /// <summary>
-        /// Method handling the Get Http verb
+        /// Method handling the HTTP GET method.
         /// </summary>
         public void OnGet()
         {

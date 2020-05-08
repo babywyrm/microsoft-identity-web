@@ -66,7 +66,7 @@ namespace Microsoft.Identity.Web.Test.InstanceDiscovery
                             "login.microsoftonline.com"
                         }
                     }
-                }
+                },
             };
         }
 

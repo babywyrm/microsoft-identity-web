@@ -449,6 +449,9 @@ dotnet_diagnostic.SA1101.severity = none
 # SX1101: Do not prefix local calls with 'this.'
 dotnet_diagnostic.SX1101.severity = error
 
+# SA1309: Field names should not begin with underscore
+dotnet_diagnostic.SA1309.severity = none
+
 [*.{cpp,h,in}]
 curly_bracket_next_line = true
 indent_brace_style = Allman

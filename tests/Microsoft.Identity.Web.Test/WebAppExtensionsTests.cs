@@ -42,7 +42,7 @@ namespace Microsoft.Identity.Web.Test
             options.TenantId = TestConstants.TenantIdAsGuid;
             options.ClientId = TestConstants.ClientId;
         };
-        
+
         public WebAppExtensionsTests()
         {
             _configSection = GetConfigSection(_configSectionName);
@@ -316,7 +316,7 @@ namespace Microsoft.Identity.Web.Test
 
         private void AddSignIn_TestCommon(IServiceCollection services, ServiceProvider provider)
         {
-            // Assert correct services added           
+            // Assert correct services added
             Assert.Contains(services, s => s.ServiceType == typeof(IConfigureOptions<OpenIdConnectOptions>));
             Assert.Contains(services, s => s.ServiceType == typeof(IConfigureOptions<MicrosoftIdentityOptions>));
             Assert.Contains(services, s => s.ServiceType == typeof(IOpenIdConnectMiddlewareDiagnostics));
@@ -433,9 +433,9 @@ namespace Microsoft.Identity.Web.Test
         }
 
         private async Task AddWebAppCallsProtectedWebApi_TestAuthorizationCodeReceivedEvent(
-            IServiceProvider provider, 
-            OpenIdConnectOptions oidcOptions, 
-            Func<AuthorizationCodeReceivedContext, Task> authCodeReceivedFuncMock, 
+            IServiceProvider provider,
+            OpenIdConnectOptions oidcOptions,
+            Func<AuthorizationCodeReceivedContext, Task> authCodeReceivedFuncMock,
             ITokenAcquisition tokenAcquisitionMock)
         {
             var (httpContext, authScheme, authProperties) = CreateContextParameters(provider);
@@ -461,9 +461,9 @@ namespace Microsoft.Identity.Web.Test
         }
 
         private async Task AddWebAppCallsProtectedWebApi_TestRedirectToIdentityProviderForSignOutEvent(
-            IServiceProvider provider, 
-            OpenIdConnectOptions oidcOptions, 
-            Func<RedirectContext, Task> redirectFuncMock, 
+            IServiceProvider provider,
+            OpenIdConnectOptions oidcOptions,
+            Func<RedirectContext, Task> redirectFuncMock,
             ITokenAcquisition tokenAcquisitionMock)
         {
             var (httpContext, authScheme, authProperties) = CreateContextParameters(provider);

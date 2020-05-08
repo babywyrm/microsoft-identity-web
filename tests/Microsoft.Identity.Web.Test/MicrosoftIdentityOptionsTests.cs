@@ -19,7 +19,7 @@ namespace Microsoft.Identity.Web.Test
         {
             var options = new MicrosoftIdentityOptions()
             {
-                SignUpSignInPolicyId = TestConstants.B2CSignUpSignInUserFlow
+                SignUpSignInPolicyId = TestConstants.B2CSignUpSignInUserFlow,
             };
 
             Assert.True(options.IsB2C);
@@ -95,7 +95,7 @@ namespace Microsoft.Identity.Web.Test
             ClientId = 1,
             Instance = 2,
             TenantId = 3,
-            Domain = 4
+            Domain = 4,
         }
     }
 }

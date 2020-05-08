@@ -24,7 +24,7 @@ namespace Microsoft.Identity.Web.Test
         {
             _cookiePolicyOptions = new CookiePolicyOptions()
             {
-                MinimumSameSitePolicy = SameSiteMode.Strict
+                MinimumSameSitePolicy = SameSiteMode.Strict,
             };
             _httpContext = HttpContextUtilities.CreateHttpContext();
         }

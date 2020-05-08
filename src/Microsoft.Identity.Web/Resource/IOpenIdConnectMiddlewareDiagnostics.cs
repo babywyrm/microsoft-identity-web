@@ -12,9 +12,9 @@ namespace Microsoft.Identity.Web.Resource
     public interface IOpenIdConnectMiddlewareDiagnostics
     {
         /// <summary>
-        /// Method to subscribe to OpenIDConnect events
+        /// Method to subscribe to OpenIDConnect events.
         /// </summary>
-        /// <param name="events">Open Id connect events</param>
+        /// <param name="events">Open Id connect events.</param>
         void Subscribe(OpenIdConnectEvents events);
     }
 }

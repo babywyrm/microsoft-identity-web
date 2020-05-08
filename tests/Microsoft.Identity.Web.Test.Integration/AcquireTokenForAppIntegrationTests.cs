@@ -34,14 +34,14 @@ namespace Microsoft.Identity.Web.Test.Integration
         private string _ccaSecret;
         private readonly ITestOutputHelper _output;
 
-        public AcquireTokenForAppIntegrationTests(ITestOutputHelper output) //test set-up
+        public AcquireTokenForAppIntegrationTests(ITestOutputHelper output) // test set-up
         {
             _output = output;
 
             _keyVault = new KeyVaultSecretsProvider();
             _ccaSecret = _keyVault.GetSecret(TestConstants.ConfidentialClientKeyVaultUri).Value;
 
-            if (!string.IsNullOrEmpty(_ccaSecret)) //Need the secret before building the services
+            if (!string.IsNullOrEmpty(_ccaSecret)) // Need the secret before building the services
             {
                 BuildTheRequiredServices();
             }
@@ -99,7 +99,7 @@ namespace Microsoft.Identity.Web.Test.Integration
 
             var options = new ConfidentialClientApplicationOptions
             {
-                ClientSecret = clientSecret
+                ClientSecret = clientSecret,
             };
 
             MicrosoftIdentityOptionsValidation microsoftIdentityOptionsValidation = new MicrosoftIdentityOptionsValidation();
@@ -129,7 +129,7 @@ namespace Microsoft.Identity.Web.Test.Integration
             string redirectUri,
             bool expectConfiguredUri)
         {
-            string httpContextRedirectUri = "https://IdentityDotNetSDKAutomation/";       
+            string httpContextRedirectUri = "https://IdentityDotNetSDKAutomation/";
 
             InitializeTokenAcquisitionObjects();
             microsoftIdentityOptions.Value.RedirectUri = redirectUri;
@@ -189,7 +189,7 @@ namespace Microsoft.Identity.Web.Test.Integration
                 {
                     Authority = TestConstants.AuthorityCommonTenant,
                     ClientId = TestConstants.ConfidentialClientId,
-                    CallbackPath = ""
+                    CallbackPath = "",
                 }));
             services.AddTransient(
                 _provider => Options.Create(new ConfidentialClientApplicationOptions
@@ -197,7 +197,7 @@ namespace Microsoft.Identity.Web.Test.Integration
                     Instance = TestConstants.AadInstance,
                     TenantId = TestConstants.ConfidentialClientLabTenant,
                     ClientId = TestConstants.ConfidentialClientId,
-                    ClientSecret = _ccaSecret
+                    ClientSecret = _ccaSecret,
                 }
                 ));
             services.AddLogging();
