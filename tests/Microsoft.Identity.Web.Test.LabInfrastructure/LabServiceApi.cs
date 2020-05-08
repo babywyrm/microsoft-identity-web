@@ -137,7 +137,7 @@ namespace Microsoft.Identity.Web.Test.LabInfrastructure
         {
             UriBuilder uriBuilder = new UriBuilder(requestUrl)
             {
-                Query = string.Join("&", queryDict.Select(x => x.Key + "=" + x.Value.ToString())),
+                Query = string.Join("&", queryDict.Select(x => x.Key + "=" + x.Value.ToString(CultureInfo.InvariantCulture))),
             };
 
             return await GetLabResponseAsync(uriBuilder.ToString()).ConfigureAwait(false);

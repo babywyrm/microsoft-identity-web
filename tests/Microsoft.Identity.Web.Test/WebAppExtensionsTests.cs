@@ -3,6 +3,7 @@
 
 using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authentication;
@@ -409,7 +410,7 @@ namespace Microsoft.Identity.Web.Test
             // Assert issuer is updated to non-default user flow
             Assert.Contains(TestConstants.B2CEditProfileUserFlow, redirectContext.ProtocolMessage.IssuerAddress);
             Assert.NotNull(redirectContext.ProtocolMessage.Parameters["client_info"]);
-            Assert.Equal("1", redirectContext.ProtocolMessage.Parameters["client_info"].ToString());
+            Assert.Equal("1", redirectContext.ProtocolMessage.Parameters["client_info"].ToString(CultureInfo.InvariantCulture));;
         }
 
         private void AddWebAppCallsProtectedWebApi_TestCommon(IServiceCollection services, ServiceProvider provider, OpenIdConnectOptions oidcOptions, IEnumerable<string> initialScopes)
