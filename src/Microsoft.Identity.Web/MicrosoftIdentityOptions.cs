@@ -40,6 +40,12 @@ namespace Microsoft.Identity.Web
         public string RedirectUri { get; set; }
 
         /// <summary>
+        /// Gets or sets TokenAcquisition as a Singleton. There are scenarios, like using the Graph SDK, 
+        /// which require TokenAcquisition to be a Singleton.
+        /// </summary>
+        public bool SingletonTokenAcquisition { get; set; } = false;
+
+        /// <summary>
         /// Gets or sets the edit profile user flow name for B2C, e.g. b2c_1_edit_profile.
         /// </summary>
         public string EditProfilePolicyId { get; set; }
