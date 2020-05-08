@@ -9,7 +9,7 @@ using Microsoft.Identity.Client;
 namespace Microsoft.Identity.Web
 {
     /// <summary>
-    /// Interface for the token acquisition service (encapsultating MSAL.NET)
+    /// Interface for the token acquisition service (encapsulating MSAL.NET).
     /// </summary>
     public interface ITokenAcquisition
     {

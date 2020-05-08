@@ -1,15 +1,15 @@
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
 
-using Microsoft.Identity.Web.Resource;
-using Microsoft.IdentityModel.Tokens;
 using System;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
-using Xunit;
+using Microsoft.Identity.Web.Resource;
 using Microsoft.Identity.Web.Test.Common;
 using Microsoft.IdentityModel.JsonWebTokens;
+using Microsoft.IdentityModel.Tokens;
 using NSubstitute;
+using Xunit;
 
 namespace Microsoft.Identity.Web.Test.Resource
 {

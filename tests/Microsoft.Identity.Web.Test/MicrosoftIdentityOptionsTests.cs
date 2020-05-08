@@ -1,9 +1,9 @@
 ﻿// Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
 
+using System.Globalization;
 using Microsoft.Extensions.Options;
 using Microsoft.Identity.Web.Test.Common;
-using System.Globalization;
 using Xunit;
 
 namespace Microsoft.Identity.Web.Test

@@ -1,11 +1,11 @@
 ﻿// Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
 
-using Microsoft.AspNetCore.Http;
-using Microsoft.Extensions.Options;
 using System.Threading;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Logging;
+using Microsoft.Extensions.Options;
 
 namespace Microsoft.Identity.Web.TokenCacheProviders.Session
 {
@@ -18,7 +18,7 @@ namespace Microsoft.Identity.Web.TokenCacheProviders.Session
     /// // In the method - public void ConfigureServices(IServiceCollection services) in startup.cs, add the following
     /// services.AddSession(option =>
     /// {
-    ///	    option.Cookie.IsEssential = true;
+    /// option.Cookie.IsEssential = true;
     /// });
     ///
     /// In the method - public void Configure(IApplicationBuilder app, IHostingEnvironment env) in startup.cs, add the following
