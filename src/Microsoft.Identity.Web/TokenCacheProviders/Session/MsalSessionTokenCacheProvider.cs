@@ -18,7 +18,7 @@ namespace Microsoft.Identity.Web.TokenCacheProviders.Session
     /// // In the method - public void ConfigureServices(IServiceCollection services) in startup.cs, add the following
     /// services.AddSession(option =>
     /// {
-    /// option.Cookie.IsEssential = true;
+    ///	    option.Cookie.IsEssential = true;
     /// });
     ///
     /// In the method - public void Configure(IApplicationBuilder app, IHostingEnvironment env) in startup.cs, add the following
