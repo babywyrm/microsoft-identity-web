@@ -5,6 +5,5 @@
 
 using System.Diagnostics.CodeAnalysis;
 
-//[assembly: SuppressMessage("StyleCop.CSharp.ReadabilityRules", "SA1108:Block statements should not contain embedded comments", Justification = "not applicable", Scope = "member", Target = "~M:Microsoft.Identity.Web.Test.Integration.AcquireTokenForAppIntegrationTests.#ctor(Xunit.Abstractions.ITestOutputHelper)")]
-//[assembly: SuppressMessage("StyleCop.CSharp.ReadabilityRules", "SA1101:Prefix local calls with this", Justification = "not applicable", Scope = "member", Target = "~M:Microsoft.Identity.Web.Test.Integration.AcquireTokenForAppIntegrationTests.#ctor(Xunit.Abstractions.ITestOutputHelper)")]
-//[assembly: SuppressMessage("Design", "CA1062:Validate arguments of public methods", Justification = "not applicable", Scope = "member", Target = "~M:Microsoft.Identity.Web.Test.Integration.AcquireTokenForAppIntegrationTests.#ctor(Xunit.Abstractions.ITestOutputHelper)")]
+[assembly: SuppressMessage("StyleCop.CSharp.ReadabilityRules", "SA1108:Block statements should not contain embedded comments", Justification = "not applicable", Scope = "member", Target = "~M:Microsoft.Identity.Web.Test.Integration.AcquireTokenForAppIntegrationTests.#ctor(Xunit.Abstractions.ITestOutputHelper)")]
+[assembly: SuppressMessage("Design", "CA1062:Validate arguments of public methods", Justification = "not applicable", Scope = "member", Target = "~M:Microsoft.Identity.Web.Test.Integration.AcquireTokenForAppIntegrationTests.#ctor(Xunit.Abstractions.ITestOutputHelper)")]
